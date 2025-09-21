@@ -18,3 +18,11 @@ No additional environment variables are required for local development.
    `npm install`
 2. Run the app:
    `npm run dev`
+
+## Deploy to GitHub Pages
+
+The repository includes a GitHub Actions workflow that builds the project with Vite and publishes the `dist/` output to GitHub Pages.
+
+1. If you fork or rename the project, update the `GITHUB_PAGES_BASE` path in [`vite.config.ts`](vite.config.ts) so it matches your repository name.
+2. Commit and push to the `main` branch. The **Deploy to GitHub Pages** workflow will install dependencies, run `npm run build`, and upload the generated site.
+3. In your repository settings, enable GitHub Pages and choose “GitHub Actions” as the source. After the workflow finishes, your site will be live at `https://<username>.github.io/PathThrive/` (or your repository name).
